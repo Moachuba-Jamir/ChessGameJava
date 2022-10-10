@@ -36,7 +36,6 @@ public class Square implements MouseInputListener {
         System.out.println("Square class is called");
 
     }
-
     public static JPanel draw(int x, int y, boolean isWhite) {
         return new JPanel() {
             @Override
@@ -70,11 +69,8 @@ public class Square implements MouseInputListener {
                     coordinatesW.put(x,y);
                     pawnPosW.put(nameB,coordinatesW);
                 }
-
                 System.out.println("White pawns:    " + pawnPosW.values());
                 System.out.println("Black pawns:    " + pawnPosB.values());
-
-
                 Pieces[0] = img;
                 Pieces[1] = img1;
                 addMouseListener(new MouseAdapter() {
@@ -83,7 +79,7 @@ public class Square implements MouseInputListener {
                         super.mousePressed(e);
                         int x1 = (e.getX())/100;
                         int y1 = (e.getY())/100;
-                        System.out.println("yes: bitch: " + x1 + y1);
+                        System.out.println("pressed: " + x1 + y1);
 //                      on press if there is a piece or an abject
                         for(SortedMap<Integer, Integer> st: pawnPosW.values()) {
                             for(int keys: st.keySet()) {

@@ -35,7 +35,6 @@ public class Board{
                         super.mousePressed(e);
                         xd = (e.getX())/100;
                         yd = (e.getY())/100;
-                        System.out.println("hello this shit is hard");
                     }
                 });
                 squares[x][y].addMouseMotionListener(new MouseMotionAdapter() {
