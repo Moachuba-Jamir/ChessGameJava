@@ -58,7 +58,7 @@ public class Square implements MouseInputListener {
                     nameW =  pName.concat(String.valueOf(x+1) + "black");
                     p1 = new Pawn(String.valueOf(x), x, y, img1);
                     try { g.drawImage(img1, x*100+20, y*100+10, this);}
-                    catch(Exception e){ System.out.println("Draw Image has failed bitch:  ");}
+                    catch(Exception e){ System.out.println("Draw Image has failed :  ");}
                     coordinatesB.put(x,y);
                     pawnPosB.put(nameW,coordinatesB);
                 }
@@ -66,7 +66,7 @@ public class Square implements MouseInputListener {
                     nameB =  pName.concat(String.valueOf(x+1) + "white");
                     p1 = new Pawn(String.valueOf(x+8), x, y, img);
                     try { g.drawImage(img, x*100+20, y*100+10, this);}
-                    catch(Exception e){ System.out.println("Draw Image has failed bitch:  ");}
+                    catch(Exception e){ System.out.println("Draw Image has failed:  ");}
                     coordinatesW.put(x,y);
                     pawnPosW.put(nameB,coordinatesW);
                 }
@@ -90,7 +90,7 @@ public class Square implements MouseInputListener {
                                 for (int i2 = 0; i2 < 8; i2++){
                                     if(st.get(i2) == y1 && keys == x1){
                                         hasPiece = true;
-                                        System.out.println("Hooray this shit matches " + keys);
+                                        System.out.println("key  matches " + keys);
                                     }else if(st.get(i2) != y1 && keys != x1){hasPiece = false;}
 
                                 }
@@ -108,7 +108,7 @@ public class Square implements MouseInputListener {
                                 for(int keys: st.keySet()) {
                                     for (int i = 0; i < 8; i++){
                                         if(st.get(i) == y && keys == x){
-                                            System.out.println("Hooray this shit matches " + keys);
+                                            System.out.println("key matches" + keys);
                                             st.get(i);
                                             repaint();
                                             System.out.println("new values  " + st.get(i) + "  " + keys);
